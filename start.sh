@@ -35,7 +35,7 @@ cat ./sx/line
 while [ $internet -ne 1 ]; do
         dig heise.de
         if [ $? -eq  0 ]; then
-                apt-get update && apt-get upgrade;
+                apt-get update && apt-get upgrade && mkdir ./takes/deb;
                 internet=1;
         else
                 #line
